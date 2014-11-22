@@ -1,0 +1,68 @@
+object Form2: TForm2
+  Left = 650
+  Height = 223
+  Top = 345
+  Width = 316
+  Caption = 'Form2'
+  ClientHeight = 223
+  ClientWidth = 316
+  OnCreate = FormCreate
+  LCLVersion = '1.2.6.0'
+  object E_city: TEdit
+    Left = 96
+    Height = 23
+    Top = 48
+    Width = 198
+    TabOrder = 0
+    Text = 'Torino'
+  end
+  object E_CAP: TEdit
+    Left = 96
+    Height = 23
+    Top = 76
+    Width = 198
+    TabOrder = 1
+    Text = '10134'
+  end
+  object E_State: TEdit
+    Left = 96
+    Height = 23
+    Top = 104
+    Width = 198
+    TabOrder = 2
+    Text = 'Italia'
+  end
+  object GO: TButton
+    Left = 124
+    Height = 25
+    Top = 152
+    Width = 75
+    Caption = 'GO'
+    OnClick = GOClick
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 15
+    Top = 48
+    Width = 21
+    Caption = 'City'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 15
+    Top = 80
+    Width = 48
+    Caption = 'Zip Code'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 15
+    Top = 112
+    Width = 43
+    Caption = 'Country'
+    ParentColor = False
+  end
+end
