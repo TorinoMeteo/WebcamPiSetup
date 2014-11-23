@@ -102,7 +102,7 @@ begin
          BUFFER:=UTF8Encode(Concat('HOSTNAME="', E_HOSTNAME.Text,'"'));
          E_HOSTNAME.Text:='';
          WriteLn(myFile, BUFFER);
-         BUFFER:=UTF8Encode(Concat('DIRECOTRY="', E_DIRECTORY.Text,'"'));
+         BUFFER:=UTF8Encode(Concat('DIRECTORY="', E_DIRECTORY.Text,'"'));
          E_DIRECTORY.Text:='';
          WriteLn(myFile, BUFFER);
          BUFFER:=UTF8Encode(Concat('USERNAME="', E_USERNAME.Text,'"'));
