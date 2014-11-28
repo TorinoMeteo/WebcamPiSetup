@@ -13,7 +13,13 @@ type
   { TForm1 }
 
     TForm1 = class(TForm)
+    E_TIMER: TEdit;
+    E_WIDTH: TEdit;
+    E_HEIGHT: TEdit;
     Image1: TImage;
+    Label10: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
     OpenCloseButton: TButton;
     Button2: TButton;
     E_FILETOUPLOAD: TEdit;
@@ -30,7 +36,6 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
-    Label8: TLabel;
     OpenFile: TOpenDialog;
     procedure OpenCloseButtonClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -60,7 +65,7 @@ end;
 procedure TForm1.OpenCloseButtonClick(Sender: TObject);
 var
   myFile : TextFile;
-  FILETOUPLAD,DESCRIPTION,HOSTANAME,DIRECTORY,USERNAME,PASSWORD,LOCATION,BUFFER: string;
+  FILETOUPLAD,DESCRIPTION,HOSTANAME,DIRECTORY,USERNAME,PASSWORD,LOCATION,IMG_TIMER,IMG_WIDTH,IMG_HEIGHT,BUFFER: string;
 
 
 begin
@@ -76,6 +81,9 @@ begin
   ReadLn(myFile, USERNAME);
   ReadLn(myFile, PASSWORD);
   ReadLn(myFile, LOCATION);
+  ReadLn(myFile, IMG_TIMER);
+  ReadLn(myFile, IMG_WIDTH);
+  ReadLn(myFile, IMG_HEIGHT);
   CloseFile(myFile);
 
   E_FILETOUPLOAD.Text:= ExtractText(FILETOUPLAD,'"','"');
@@ -85,6 +93,9 @@ begin
   E_USERNAME.Text:= ExtractText(USERNAME,'"','"');
   E_PASSWORD.Text:= ExtractText(PASSWORD,'"','"');
   E_LOCATION.Text:= ExtractText(LOCATION,'"','"');
+  E_TIMER.Text:= ExtractText(IMG_TIMER,'"','"');
+  E_WIDTH.Text:= ExtractText(IMG_WIDTH,'"','"');
+  E_HEIGHT.Text:= ExtractText(IMG_HEIGHT,'"','"');
   OpenCloseButton.caption := 'Save';
   Exit;
       end;
@@ -111,8 +122,17 @@ begin
          BUFFER:=UTF8Encode(Concat('PASSWORD="', E_PASSWORD.Text,'"'));
          E_PASSWORD.Text:='';
          WriteLn(myFile, BUFFER);
-         BUFFER:=UTF8Encode(Concat('Location="', E_LOCATION.Text,'"'));
+         BUFFER:=UTF8Encode(Concat('LOCATION="', E_LOCATION.Text,'"'));
          E_LOCATION.Text:='';
+         WriteLn(myFile, BUFFER);
+         BUFFER:=UTF8Encode(Concat('TIMER="', E_TIMER.Text,'"'));
+         E_TIMER.Text:='';
+         WriteLn(myFile, BUFFER);
+         BUFFER:=UTF8Encode(Concat('WIDTH="', E_WIDTH.Text,'"'));
+         E_WIDTH.Text:='';
+         WriteLn(myFile, BUFFER);
+         BUFFER:=UTF8Encode(Concat('HEIGHT="', E_HEIGHT.Text,'"'));
+         E_HEIGHT.Text:='';
          WriteLn(myFile, BUFFER);
          CloseFile(myFile);
        Exit;
