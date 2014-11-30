@@ -1,17 +1,17 @@
 object Form1: TForm1
-  Left = 913
+  Left = 310
   Height = 480
-  Top = 334
+  Top = 176
   Width = 640
   Caption = 'Torinometo Webcam Setup Tool'
   ClientHeight = 480
   ClientWidth = 640
   OnCreate = FormCreate
-  LCLVersion = '1.2.6.0'
+  LCLVersion = '1.2.4.0'
   object OpenCloseButton: TButton
     Left = 465
-    Height = 26
-    Top = 146
+    Height = 27
+    Top = 127
     Width = 77
     Caption = 'Open'
     OnClick = OpenCloseButtonClick
@@ -19,134 +19,118 @@ object Form1: TForm1
   end
   object E_FILETOUPLOAD: TEdit
     Left = 233
-    Height = 23
-    Top = 149
+    Height = 27
+    Top = 127
     Width = 224
     TabOrder = 1
   end
   object E_DESCRIPTION: TEdit
     Left = 233
-    Height = 23
-    Top = 186
+    Height = 27
+    Top = 152
     Width = 224
     TabOrder = 2
   end
   object E_HOSTNAME: TEdit
     Left = 233
-    Height = 23
-    Top = 223
+    Height = 27
+    Top = 177
     Width = 224
     TabOrder = 3
   end
   object E_DIRECTORY: TEdit
     Left = 233
-    Height = 23
-    Top = 260
+    Height = 27
+    Top = 202
     Width = 224
     TabOrder = 4
   end
   object E_USERNAME: TEdit
     Left = 233
-    Height = 23
-    Top = 297
+    Height = 27
+    Top = 227
     Width = 224
     TabOrder = 5
   end
   object E_PASSWORD: TEdit
     Left = 233
-    Height = 23
-    Top = 334
+    Height = 27
+    Top = 252
     Width = 224
     TabOrder = 6
   end
   object E_LOCATION: TEdit
     Left = 233
-    Height = 23
-    Top = 371
+    Height = 27
+    Top = 277
     Width = 224
     TabOrder = 7
   end
   object Button2: TButton
     Left = 465
     Height = 25
-    Top = 371
+    Top = 279
     Width = 77
     Caption = 'Get WOEID'
     OnClick = Button2Click
     TabOrder = 8
   end
   object Label1: TLabel
-    Left = 118
-    Height = 15
-    Top = 154
-    Width = 101
+    Left = 104
+    Height = 17
+    Top = 137
+    Width = 113
     Caption = 'Webcam Filename:'
     ParentColor = False
   end
   object Label2: TLabel
-    Left = 118
-    Height = 15
-    Top = 191
-    Width = 113
+    Left = 104
+    Height = 17
+    Top = 162
+    Width = 127
     Caption = 'Webcam Description:'
     ParentColor = False
   end
   object Label3: TLabel
-    Left = 118
-    Height = 15
-    Top = 228
-    Width = 68
+    Left = 104
+    Height = 17
+    Top = 187
+    Width = 77
     Caption = 'FTP Address:'
     ParentColor = False
   end
   object Label4: TLabel
-    Left = 118
-    Height = 15
-    Top = 265
-    Width = 74
+    Left = 104
+    Height = 17
+    Top = 212
+    Width = 84
     Caption = 'FTP Directory:'
     ParentColor = False
     OnClick = Label4Click
   end
   object Label5: TLabel
-    Left = 118
-    Height = 15
-    Top = 302
-    Width = 76
-    Caption = 'FTP Username'
+    Left = 104
+    Height = 17
+    Top = 237
+    Width = 90
+    Caption = 'FTP Username:'
     ParentColor = False
   end
   object Label6: TLabel
-    Left = 118
-    Height = 15
-    Top = 339
-    Width = 76
+    Left = 104
+    Height = 17
+    Top = 262
+    Width = 87
     Caption = 'FTP Password:'
     ParentColor = False
   end
   object Label7: TLabel
-    Left = 118
-    Height = 15
-    Top = 376
-    Width = 74
-    Caption = 'Yahoo WOEID'
+    Left = 104
+    Height = 17
+    Top = 287
+    Width = 87
+    Caption = 'Yahoo WOEID:'
     ParentColor = False
-  end
-  object Label8: TLabel
-    Left = 118
-    Height = 16
-    Top = 405
-    Width = 219
-    Caption = 'WOEID (Where On Earth IDentifier)'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clRed
-    Font.Height = -13
-    Font.Name = 'Arial'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    Font.Style = [fsBold]
-    ParentColor = False
-    ParentFont = False
   end
   object Image1: TImage
     Left = -1
@@ -514,10 +498,55 @@ object Form1: TForm1
       0049454E44AE426082
     }
   end
+  object E_TIMER: TEdit
+    Left = 233
+    Height = 27
+    Top = 302
+    Width = 224
+    TabOrder = 9
+  end
+  object Label8: TLabel
+    Left = 104
+    Height = 17
+    Top = 312
+    Width = 87
+    Caption = 'Capture Every:'
+    ParentColor = False
+  end
+  object E_WIDTH: TEdit
+    Left = 233
+    Height = 27
+    Top = 327
+    Width = 224
+    TabOrder = 10
+  end
+  object Label9: TLabel
+    Left = 104
+    Height = 17
+    Top = 337
+    Width = 81
+    Caption = 'Image Width:'
+    ParentColor = False
+  end
+  object E_HEIGHT: TEdit
+    Left = 233
+    Height = 27
+    Top = 352
+    Width = 224
+    TabOrder = 11
+  end
+  object Label10: TLabel
+    Left = 104
+    Height = 17
+    Top = 362
+    Width = 84
+    Caption = 'Image Height:'
+    ParentColor = False
+  end
   object OpenFile: TOpenDialog
     DefaultExt = '.conf'
     Filter = 'Webcam ConfigFile |webcam.conf'
-    left = 465
-    top = 181
+    left = 472
+    top = 80
   end
 end
